@@ -1,0 +1,110 @@
+{
+  "projectionOrdering": {
+    "Values": [
+      0,
+      1
+    ]
+  },
+  "queryMetadata": {
+    "Select": [
+      {
+        "Restatement": "Col Name",
+        "Name": "File Guidelines.Col Name",
+        "Type": 2048
+      },
+      {
+        "Restatement": "Column4",
+        "Name": "File Guidelines.Column4",
+        "Type": 2048
+      }
+    ],
+    "Filters": [
+      {
+        "type": 0,
+        "expression": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "File Guidelines"
+              }
+            },
+            "Property": "Col Name"
+          }
+        }
+      },
+      {
+        "type": 0,
+        "expression": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "File Guidelines"
+              }
+            },
+            "Property": "Column4"
+          }
+        }
+      }
+    ]
+  },
+  "visualElements": [
+    {
+      "DataRoles": [
+        {
+          "Name": "Values",
+          "Projection": 0,
+          "isActive": false
+        },
+        {
+          "Name": "Values",
+          "Projection": 1,
+          "isActive": false
+        }
+      ]
+    }
+  ],
+  "selects": [
+    {
+      "displayName": "Col Name",
+      "queryName": "File Guidelines.Col Name",
+      "roles": {
+        "Values": true
+      },
+      "type": {
+        "category": null,
+        "underlyingType": 1
+      },
+      "expr": {
+        "Column": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "File Guidelines"
+            }
+          },
+          "Property": "Col Name"
+        }
+      }
+    },
+    {
+      "displayName": "Column4",
+      "queryName": "File Guidelines.Column4",
+      "roles": {
+        "Values": true
+      },
+      "type": {
+        "category": null,
+        "underlyingType": 1
+      },
+      "expr": {
+        "Column": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "File Guidelines"
+            }
+          },
+          "Property": "Column4"
+        }
+      }
+    }
+  ]
+}
