@@ -1,0 +1,10 @@
+relationship 'bb53abee-39d4-4a8f-8365-7889f2d3d79c'
+	fromColumn: Data.Date
+	joinOnDateBehavior: DatePartOnly
+	toColumn: 'LocalDateTable_200b2692-4f72-4384-b979-61fce62f8376'.Date
+
+relationship 'f7b7a5b6-2d69-45cc-94bd-5eec363bee26'
+	crossFilteringBehavior: BothDirections
+	fromColumn: Data.Key
+	toColumn: Quota.Key
+

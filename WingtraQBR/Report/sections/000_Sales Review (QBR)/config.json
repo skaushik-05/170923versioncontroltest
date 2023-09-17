@@ -1,0 +1,24 @@
+{
+  "relationships": [
+    {
+      "source": "02444305e8d97da4217e",
+      "target": "75105431e7b6e449e9a1",
+      "type": 3
+    }
+  ],
+  "objects": {
+    "background": [
+      {
+        "properties": {
+          "transparency": {
+            "expr": {
+              "Literal": {
+                "Value": "0D"
+              }
+            }
+          }
+        }
+      }
+    ]
+  }
+}

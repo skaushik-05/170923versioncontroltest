@@ -1,0 +1,28 @@
+{
+  "displayName": "Chart",
+  "name": "Bookmark1ac2139a7564e0cb0ae1",
+  "explorationState": {
+    "version": "1.3",
+    "activeSection": "ReportSection",
+    "objects": {
+      "merge": {
+        "outspacePane": [
+          {
+            "properties": {
+              "expanded": {
+                "expr": {
+                  "Literal": {
+                    "Value": "false"
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "options": {
+    "targetVisualNames": []
+  }
+}

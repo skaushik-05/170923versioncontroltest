@@ -1,0 +1,617 @@
+{
+  "objects": {
+    "columnWidth": [
+      {
+        "properties": {
+          "value": {
+            "expr": {
+              "Literal": {
+                "Value": "137.16873471585464D"
+              }
+            }
+          }
+        },
+        "selector": {
+          "metadata": "Sum(Quota.Goal)"
+        }
+      },
+      {
+        "properties": {
+          "value": {
+            "expr": {
+              "Literal": {
+                "Value": "147.35883496886734D"
+              }
+            }
+          }
+        },
+        "selector": {
+          "metadata": "Sum(Data.Attained Sales)"
+        }
+      },
+      {
+        "properties": {
+          "value": {
+            "expr": {
+              "Literal": {
+                "Value": "105.99997590719451D"
+              }
+            }
+          }
+        },
+        "selector": {
+          "metadata": "Data.% Attained"
+        }
+      }
+    ],
+    "values": [
+      {
+        "properties": {
+          "backColor": {
+            "solid": {
+              "color": {
+                "expr": {
+                  "Conditional": {
+                    "Cases": [
+                      {
+                        "Condition": {
+                          "And": {
+                            "Left": {
+                              "Comparison": {
+                                "ComparisonKind": 2,
+                                "Left": {
+                                  "Measure": {
+                                    "Expression": {
+                                      "SourceRef": {
+                                        "Entity": "Data"
+                                      }
+                                    },
+                                    "Property": "% Attained"
+                                  }
+                                },
+                                "Right": {
+                                  "Literal": {
+                                    "Value": "1D"
+                                  }
+                                }
+                              }
+                            },
+                            "Right": {
+                              "Comparison": {
+                                "ComparisonKind": 3,
+                                "Left": {
+                                  "Measure": {
+                                    "Expression": {
+                                      "SourceRef": {
+                                        "Entity": "Data"
+                                      }
+                                    },
+                                    "Property": "% Attained"
+                                  }
+                                },
+                                "Right": {
+                                  "Literal": {
+                                    "Value": "3D"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "Value": {
+                          "Literal": {
+                            "Value": "'#E66C37'"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        },
+        "selector": {
+          "data": [
+            {
+              "dataViewWildcard": {
+                "matchingOption": 1
+              }
+            }
+          ],
+          "metadata": "Data.% Attained"
+        }
+      },
+      {
+        "properties": {},
+        "selector": {
+          "data": [
+            {
+              "dataViewWildcard": {
+                "matchingOption": 0
+              }
+            }
+          ],
+          "metadata": "Data.% Attained"
+        }
+      }
+    ],
+    "columnFormatting": [
+      {
+        "properties": {
+          "dataBars": {
+            "positiveColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#E66C37'"
+                    }
+                  }
+                }
+              }
+            },
+            "negativeColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#DEEFFF'"
+                    }
+                  }
+                }
+              }
+            },
+            "axisColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#252423'"
+                    }
+                  }
+                }
+              }
+            },
+            "reverseDirection": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "hideText": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        },
+        "selector": {
+          "metadata": "Sum(Data.Attained Sales)"
+        }
+      }
+    ],
+    "grid": [
+      {
+        "properties": {
+          "rowPadding": {
+            "expr": {
+              "Literal": {
+                "Value": "1D"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "columnHeaders": [
+      {
+        "properties": {
+          "backColor": {
+            "solid": {
+              "color": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'#334A58'"
+                  }
+                }
+              }
+            }
+          },
+          "fontColor": {
+            "solid": {
+              "color": {
+                "expr": {
+                  "ThemeDataColor": {
+                    "ColorId": 0,
+                    "Percent": 0
+                  }
+                }
+              }
+            }
+          },
+          "titleAlignment": {
+            "expr": {
+              "Literal": {
+                "Value": "'Center'"
+              }
+            }
+          },
+          "alignment": {
+            "expr": {
+              "Literal": {
+                "Value": "'Center'"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "projectionOrdering": {
+    "Rows": [
+      3,
+      4
+    ],
+    "Values": [
+      0,
+      1,
+      2
+    ]
+  },
+  "projectionActiveItems": {
+    "Rows": [
+      {
+        "queryRef": "Data.Region_1",
+        "suppressConcat": false
+      },
+      {
+        "queryRef": "Data.Sales Manager",
+        "suppressConcat": false
+      }
+    ]
+  },
+  "queryMetadata": {
+    "Select": [
+      {
+        "Restatement": "Attained ($)",
+        "Name": "Sum(Data.Attained Sales)",
+        "Type": 1,
+        "Format": "\\$#,0;(\\$#,0);\\$#,0"
+      },
+      {
+        "Restatement": "Goal ($)",
+        "Name": "Sum(Quota.Goal)",
+        "Type": 3,
+        "Format": "\\$#,0;(\\$#,0);\\$#,0"
+      },
+      {
+        "Restatement": "% Attained",
+        "Name": "Data.% Attained",
+        "Type": 1,
+        "Format": "0.0%;-0.0%;0.0%"
+      },
+      {
+        "Restatement": "Region / Sales Manager",
+        "Name": "Data.Region_1",
+        "Type": 2048
+      },
+      {
+        "Restatement": "Sales Manager",
+        "Name": "Data.Sales Manager",
+        "Type": 2048
+      }
+    ],
+    "Filters": [
+      {
+        "type": 2,
+        "expression": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Quota"
+                  }
+                },
+                "Property": "Goal"
+              }
+            },
+            "Function": 0
+          }
+        }
+      }
+    ]
+  },
+  "visualElements": [
+    {
+      "DataRoles": [
+        {
+          "Name": "Rows",
+          "Projection": 3,
+          "isActive": true
+        },
+        {
+          "Name": "Rows",
+          "Projection": 4,
+          "isActive": true
+        },
+        {
+          "Name": "Values",
+          "Projection": 0,
+          "isActive": false
+        },
+        {
+          "Name": "Values",
+          "Projection": 1,
+          "isActive": false
+        },
+        {
+          "Name": "Values",
+          "Projection": 2,
+          "isActive": false
+        }
+      ]
+    }
+  ],
+  "selects": [
+    {
+      "displayName": "Attained ($)",
+      "format": "\\$#,0;(\\$#,0);\\$#,0",
+      "queryName": "Sum(Data.Attained Sales)",
+      "roles": {
+        "Values": true
+      },
+      "type": {
+        "category": null,
+        "underlyingType": 259
+      },
+      "expr": {
+        "Aggregation": {
+          "Expression": {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Entity": "Data"
+                }
+              },
+              "Property": "Attained Sales"
+            }
+          },
+          "Function": 0
+        }
+      },
+      "relatedObjects": {
+        "columnFormatting": {
+          "dataBars": [
+            {
+              "metadata": "Sum(Data.Attained Sales)"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "displayName": "Goal ($)",
+      "format": "\\$#,0;(\\$#,0);\\$#,0",
+      "queryName": "Sum(Quota.Goal)",
+      "roles": {
+        "Values": true
+      },
+      "sort": 2,
+      "sortOrder": 0,
+      "type": {
+        "category": null,
+        "underlyingType": 260
+      },
+      "expr": {
+        "Aggregation": {
+          "Expression": {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Entity": "Quota"
+                }
+              },
+              "Property": "Goal"
+            }
+          },
+          "Function": 0
+        }
+      }
+    },
+    {
+      "displayName": "% Attained",
+      "format": "0.0%;-0.0%;0.0%",
+      "queryName": "Data.% Attained",
+      "roles": {
+        "Values": true
+      },
+      "type": {
+        "category": null,
+        "underlyingType": 259
+      },
+      "expr": {
+        "Measure": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Data"
+            }
+          },
+          "Property": "% Attained"
+        }
+      },
+      "relatedObjects": {
+        "values": {
+          "backColor": [
+            {
+              "data": [
+                {
+                  "kind": 4,
+                  "_matchingOption": 1,
+                  "_key": {}
+                }
+              ],
+              "metadata": "Data.% Attained"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "displayName": "Region / Sales Manager",
+      "queryName": "Data.Region_1",
+      "roles": {
+        "Rows": true
+      },
+      "type": {
+        "category": null,
+        "underlyingType": 1
+      },
+      "expr": {
+        "Column": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Data"
+            }
+          },
+          "Property": "Region_1"
+        }
+      }
+    },
+    {
+      "displayName": "Sales Manager",
+      "queryName": "Data.Sales Manager",
+      "roles": {
+        "Rows": true
+      },
+      "type": {
+        "category": null,
+        "underlyingType": 1
+      },
+      "expr": {
+        "Column": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Data"
+            }
+          },
+          "Property": "Sales Manager"
+        }
+      }
+    }
+  ],
+  "expansionStates": [
+    {
+      "roles": [
+        "Rows"
+      ],
+      "levels": [
+        {
+          "queryRefs": [
+            "Data.Region_1"
+          ],
+          "isCollapsed": true,
+          "identityKeys": [
+            {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Data"
+                  }
+                },
+                "Property": "Region_1"
+              }
+            }
+          ],
+          "isPinned": true
+        },
+        {
+          "queryRefs": [
+            "Data.Sales Manager"
+          ],
+          "isCollapsed": true,
+          "isPinned": true
+        }
+      ],
+      "root": {
+        "identityValues": null,
+        "children": [
+          {
+            "identityValues": [
+              {
+                "Literal": {
+                  "Value": "'US West'"
+                }
+              }
+            ],
+            "isToggled": true
+          },
+          {
+            "identityValues": [
+              {
+                "Literal": {
+                  "Value": "'US East'"
+                }
+              }
+            ],
+            "isToggled": true
+          },
+          {
+            "identityValues": [
+              {
+                "Literal": {
+                  "Value": "'Europe'"
+                }
+              }
+            ],
+            "isToggled": true
+          },
+          {
+            "identityValues": [
+              {
+                "Literal": {
+                  "Value": "'APAC'"
+                }
+              }
+            ],
+            "isToggled": true
+          },
+          {
+            "identityValues": [
+              {
+                "Literal": {
+                  "Value": "'CAN'"
+                }
+              }
+            ],
+            "isToggled": true
+          },
+          {
+            "identityValues": [
+              {
+                "Literal": {
+                  "Value": "'LATAM'"
+                }
+              }
+            ],
+            "isToggled": true
+          },
+          {
+            "identityValues": [
+              {
+                "Literal": {
+                  "Value": "'MEA'"
+                }
+              }
+            ],
+            "isToggled": true
+          }
+        ]
+      }
+    }
+  ]
+}

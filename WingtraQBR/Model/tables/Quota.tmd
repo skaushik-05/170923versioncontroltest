@@ -1,0 +1,71 @@
+table Quota
+	lineageTag: 187d0b77-9d66-42bc-b7f7-3360dc50d461
+	ordinal: 1
+
+	partition Quota = M
+		mode: Import
+		expression:=
+			let
+			    Source = Excel.Workbook(File.Contents("C:\Users\admin\Downloads\Sales Data.xlsx"), null, true),
+			    Quota_Sheet = Source{[Item="Quota",Kind="Sheet"]}[Data],
+			    #"Promoted Headers" = Table.PromoteHeaders(Quota_Sheet, [PromoteAllScalars=true]),
+			    #"Unpivoted Columns" = Table.UnpivotOtherColumns(#"Promoted Headers", {"Sales Manager", "Region"}, "Attribute", "Value"),
+			    #"Renamed Columns" = Table.RenameColumns(#"Unpivoted Columns",{{"Attribute", "Quarter"}, {"Value", "Dollar"}}),
+			    #"Changed Type" = Table.TransformColumnTypes(#"Renamed Columns",{{"Dollar", Int64.Type}}),
+			    #"Duplicated Column" = Table.DuplicateColumn(#"Changed Type", "Sales Manager", "Sales Manager - Copy"),
+			    #"Duplicated Column1" = Table.DuplicateColumn(#"Duplicated Column", "Quarter", "Quarter - Copy"),
+			    #"Merged Columns" = Table.CombineColumns(#"Duplicated Column1",{"Sales Manager - Copy", "Quarter - Copy"},Combiner.CombineTextByDelimiter("-", QuoteStyle.None),"Key"),
+			    #"Renamed Columns1" = Table.RenameColumns(#"Merged Columns",{{"Dollar", "Goal"}})
+			in
+			    #"Renamed Columns1"
+
+	column 'Sales Manager'
+		dataType: String
+		isDataTypeInferred: false
+		lineageTag: 0b55626f-50af-40d1-ae65-a9e0ca5e08ec
+		sourceColumn: "Sales Manager"
+		summarizeBy: None
+
+		annotation SummarizationSetBy = Automatic
+
+	column Region
+		dataType: String
+		isDataTypeInferred: false
+		lineageTag: 7e8fc47c-0103-4541-be78-3bf4b7c29c6a
+		sourceColumn: Region
+		summarizeBy: None
+
+		annotation SummarizationSetBy = Automatic
+
+	column Quarter
+		dataType: String
+		isDataTypeInferred: false
+		lineageTag: 3d8ab988-8d58-40d7-a518-a37313b7d444
+		sourceColumn: Quarter
+		summarizeBy: None
+
+		annotation SummarizationSetBy = Automatic
+
+	column Goal
+		dataType: Int64
+		formatString:= \$#,0;(\$#,0);\$#,0
+		isDataTypeInferred: false
+		lineageTag: f2e20ca0-cda0-4ef9-8596-b777f5a56b9a
+		sourceColumn: Goal
+		summarizeBy: Sum
+
+		annotation SummarizationSetBy = User
+
+	column Key
+		dataType: String
+		isDataTypeInferred: false
+		lineageTag: 1e10a642-2d79-4e88-8dfa-003b8a7ab415
+		sourceColumn: Key
+		summarizeBy: None
+
+		annotation SummarizationSetBy = Automatic
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

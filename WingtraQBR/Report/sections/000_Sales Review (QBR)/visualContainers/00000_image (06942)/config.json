@@ -1,0 +1,37 @@
+{
+  "name": "06942850064d98a42b51",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "x": 13.333333333333334,
+        "y": 6.666666666666667,
+        "z": 2000,
+        "width": 168.33333333333334,
+        "height": 68.333333333333343,
+        "tabOrder": 0
+      }
+    }
+  ],
+  "singleVisual": {
+    "visualType": "image",
+    "drillFilterOtherVisuals": true,
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "imageUrl": {
+              "expr": {
+                "ResourcePackageItem": {
+                  "PackageName": "RegisteredResources",
+                  "PackageType": 1,
+                  "ItemName": "wingtra-logo-small-1-1-13550917540252958.png"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}
