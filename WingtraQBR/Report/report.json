@@ -1,11 +1,6 @@
 {
   "id": 0,
   "layoutOptimization": 0,
-  "publicCustomVisuals": [
-    "databarKPIB8060E2B144244C5A38807466893C9F5",
-    "BulletChart832EC06300814F26921DEFC2DE8606BE",
-    "PBI_CV_25997FEB_F466_44FA_B562_AC4063283C4C"
-  ],
   "resourcePackages": [
     {
       "resourcePackage": {
@@ -19,25 +14,6 @@
         ],
         "name": "SharedResources",
         "type": 2
-      }
-    },
-    {
-      "resourcePackage": {
-        "disabled": false,
-        "items": [
-          {
-            "name": "wingtra-logo-small-1-1-13550917540252958.png",
-            "path": "wingtra-logo-small-1-1-13550917540252958.png",
-            "type": 100
-          },
-          {
-            "name": "wingtralogoshort2x-2-pgd3iedle9882439769121683.png",
-            "path": "wingtralogoshort2x-2-pgd3iedle9882439769121683.png",
-            "type": 100
-          }
-        ],
-        "name": "RegisteredResources",
-        "type": 1
       }
     }
   ]
