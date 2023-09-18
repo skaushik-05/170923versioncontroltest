@@ -1,5 +1,5 @@
 {
-  "version": "5.48",
+  "version": "5.47",
   "themeCollection": {
     "baseTheme": {
       "name": "CY23SU08",
@@ -26,6 +26,19 @@
             "expr": {
               "Literal": {
                 "Value": "'Top'"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "outspacePane": [
+      {
+        "properties": {
+          "expanded": {
+            "expr": {
+              "Literal": {
+                "Value": "false"
               }
             }
           }
