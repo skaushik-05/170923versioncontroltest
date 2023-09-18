@@ -23,9 +23,11 @@
     ],
     "Series": [
       2
+
     ],
     "Rows": [
       3
+
     ]
   },
   "projectionActiveItems": {
@@ -53,6 +55,7 @@
         "Restatement": "Work At Risk ",
         "Name": "Trend.Work At Risk ",
         "Type": 2048
+
       },
       {
         "Restatement": "Project Name",

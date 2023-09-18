@@ -6,6 +6,7 @@
       "position": {
         "x": 0,
         "y": 381.39219015280139,
+        "y": 0,
         "z": 0,
         "width": 435.17826825127338,
         "height": 338.60780984719867,
@@ -31,6 +32,7 @@
         {
           "queryRef": "Trend.Work At Risk "
         }
+
       ],
       "Rows": [
         {
@@ -45,11 +47,13 @@
           "Name": "t",
           "Entity": "Trend",
           "Type": 0
+
         },
         {
           "Name": "w",
           "Entity": "Weekly Status",
           "Type": 0
+
         }
       ],
       "Select": [
@@ -93,6 +97,7 @@
           },
           "Name": "Trend.Work At Risk ",
           "NativeReferenceName": "Work At Risk "
+
         },
         {
           "Column": {
@@ -105,6 +110,7 @@
           },
           "Name": "Weekly Status.Project Name",
           "NativeReferenceName": "Project Name"
+
         }
       ],
       "OrderBy": [
