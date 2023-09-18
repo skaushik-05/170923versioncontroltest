@@ -1,0 +1,95 @@
+{
+  "name": "9b79d1ade59012b4cc86",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "x": 940.53757322175727,
+        "y": 448.332050209205,
+        "z": 2002,
+        "width": 340.01941422594143,
+        "height": 271.4671129707113,
+        "tabOrder": 2002
+      }
+    }
+  ],
+  "singleVisual": {
+    "visualType": "donutChart",
+    "projections": {
+      "Category": [
+        {
+          "queryRef": "Trend.Red since",
+          "active": true
+        }
+      ],
+      "Y": [
+        {
+          "queryRef": "CountNonNull(Trend.Vendor)"
+        }
+      ]
+    },
+    "prototypeQuery": {
+      "Version": 2,
+      "From": [
+        {
+          "Name": "t",
+          "Entity": "Trend",
+          "Type": 0
+        }
+      ],
+      "Select": [
+        {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "t"
+                  }
+                },
+                "Property": "Vendor"
+              }
+            },
+            "Function": 5
+          },
+          "Name": "CountNonNull(Trend.Vendor)",
+          "NativeReferenceName": "Count of Vendor"
+        },
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "t"
+              }
+            },
+            "Property": "Red since"
+          },
+          "Name": "Trend.Red since",
+          "NativeReferenceName": "Red since"
+        }
+      ],
+      "OrderBy": [
+        {
+          "Direction": 2,
+          "Expression": {
+            "Aggregation": {
+              "Expression": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Source": "t"
+                    }
+                  },
+                  "Property": "Vendor"
+                }
+              },
+              "Function": 5
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true,
+    "hasDefaultSort": true
+  }
+}
