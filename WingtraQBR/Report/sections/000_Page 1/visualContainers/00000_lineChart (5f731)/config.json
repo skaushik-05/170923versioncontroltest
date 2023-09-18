@@ -1,38 +1,40 @@
 {
-  "name": "7dae1cd3b5b61b64905a",
+  "name": "5f731603e756bb6eb8e3",
   "layouts": [
     {
       "id": 0,
       "position": {
         "x": 0,
         "y": 381.39219015280139,
-        "z": 1000,
+        "z": 0,
         "width": 435.17826825127338,
         "height": 338.60780984719867,
-        "tabOrder": 1000
+        "tabOrder": 0
       }
     }
   ],
   "singleVisual": {
-    "visualType": "donutChart",
+    "visualType": "lineChart",
     "projections": {
-      "Category": [
-        {
-          "queryRef": "Trend.Week",
-          "active": true
-        },
-        {
-          "queryRef": "Trend.Vendor"
-        }
-      ],
       "Y": [
         {
           "queryRef": "Sum(Trend.Amount)"
         }
       ],
+      "Category": [
+        {
+          "queryRef": "Trend.Week",
+          "active": true
+        }
+      ],
       "Series": [
         {
           "queryRef": "Trend.Work At Risk "
+        }
+      ],
+      "Rows": [
+        {
+          "queryRef": "Weekly Status.Project Name"
         }
       ]
     },
@@ -43,21 +45,14 @@
           "Name": "t",
           "Entity": "Trend",
           "Type": 0
+        },
+        {
+          "Name": "w",
+          "Entity": "Weekly Status",
+          "Type": 0
         }
       ],
       "Select": [
-        {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Source": "t"
-              }
-            },
-            "Property": "Week"
-          },
-          "Name": "Trend.Week",
-          "NativeReferenceName": "Week"
-        },
         {
           "Aggregation": {
             "Expression": {
@@ -82,6 +77,18 @@
                 "Source": "t"
               }
             },
+            "Property": "Week"
+          },
+          "Name": "Trend.Week",
+          "NativeReferenceName": "Week"
+        },
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "t"
+              }
+            },
             "Property": "Work At Risk "
           },
           "Name": "Trend.Work At Risk ",
@@ -91,13 +98,13 @@
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Source": "t"
+                "Source": "w"
               }
             },
-            "Property": "Vendor"
+            "Property": "Project Name"
           },
-          "Name": "Trend.Vendor",
-          "NativeReferenceName": "Vendor"
+          "Name": "Weekly Status.Project Name",
+          "NativeReferenceName": "Project Name"
         }
       ],
       "OrderBy": [
