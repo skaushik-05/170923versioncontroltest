@@ -13,18 +13,6 @@
           ],
           "Select": [
             {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Source": "t"
-                  }
-                },
-                "Property": "Est. End Date"
-              },
-              "Name": "Trend.Est. End Date",
-              "NativeReferenceName": "Est. End Date"
-            },
-            {
               "Aggregation": {
                 "Expression": {
                   "Column": {
@@ -40,6 +28,30 @@
               },
               "Name": "Sum(Trend.Amount)",
               "NativeReferenceName": "Sum of Amount"
+            },
+            {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "t"
+                  }
+                },
+                "Property": "Week"
+              },
+              "Name": "Trend.Week",
+              "NativeReferenceName": "Week"
+            },
+            {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "t"
+                  }
+                },
+                "Property": "Work At Risk "
+              },
+              "Name": "Trend.Work At Risk ",
+              "NativeReferenceName": "Work At Risk "
             }
           ]
         },
@@ -54,9 +66,18 @@
               }
             ]
           },
+          "Secondary": {
+            "Groupings": [
+              {
+                "Projections": [
+                  2
+                ]
+              }
+            ]
+          },
           "DataReduction": {
             "DataVolume": 4,
-            "Primary": {
+            "Intersection": {
               "BinnedLineSample": {}
             }
           },
