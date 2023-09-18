@@ -1,0 +1,66 @@
+{
+  "name": "2d3bf3eee399110be73e",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "x": 479.86610878661088,
+        "y": 448.332050209205,
+        "z": 2003,
+        "width": 389.37707112970713,
+        "height": 271.4671129707113,
+        "tabOrder": 2003
+      }
+    }
+  ],
+  "singleVisual": {
+    "visualType": "multiRowCard",
+    "projections": {
+      "Values": [
+        {
+          "queryRef": "File Guidelines.Col Name"
+        },
+        {
+          "queryRef": "File Guidelines.Column4"
+        }
+      ]
+    },
+    "prototypeQuery": {
+      "Version": 2,
+      "From": [
+        {
+          "Name": "f",
+          "Entity": "File Guidelines",
+          "Type": 0
+        }
+      ],
+      "Select": [
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "f"
+              }
+            },
+            "Property": "Col Name"
+          },
+          "Name": "File Guidelines.Col Name",
+          "NativeReferenceName": "Col Name"
+        },
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "f"
+              }
+            },
+            "Property": "Column4"
+          },
+          "Name": "File Guidelines.Column4",
+          "NativeReferenceName": "Column4"
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}
