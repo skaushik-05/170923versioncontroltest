@@ -1,29 +1,30 @@
 {
-  "name": "351a564f9482d450b996",
+  "name": "01deabf881202c2623ac",
   "layouts": [
     {
       "id": 0,
       "position": {
         "x": 836.12903225806451,
-        "y": 0,
-        "z": 2001,
+        "y": 381.39219015280139,
+        "z": 2004,
         "width": 443.73514431239391,
         "height": 338.60780984719867,
-        "tabOrder": 2001
+        "tabOrder": 2004
       }
     }
   ],
   "singleVisual": {
-    "visualType": "clusteredBarChart",
+    "visualType": "lineChart",
     "projections": {
-      "Y": [
+      "Category": [
         {
-          "queryRef": "Sum(Sheet4.Amount)"
+          "queryRef": "Trend.Est. End Date",
+          "active": true
         }
       ],
-      "Series": [
+      "Y": [
         {
-          "queryRef": "Sheet4.Current Status"
+          "queryRef": "Sum(Trend.Amount)"
         }
       ]
     },
@@ -31,19 +32,31 @@
       "Version": 2,
       "From": [
         {
-          "Name": "s",
-          "Entity": "Sheet4",
+          "Name": "t",
+          "Entity": "Trend",
           "Type": 0
         }
       ],
       "Select": [
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "t"
+              }
+            },
+            "Property": "Est. End Date"
+          },
+          "Name": "Trend.Est. End Date",
+          "NativeReferenceName": "Est. End Date"
+        },
         {
           "Aggregation": {
             "Expression": {
               "Column": {
                 "Expression": {
                   "SourceRef": {
-                    "Source": "s"
+                    "Source": "t"
                   }
                 },
                 "Property": "Amount"
@@ -51,38 +64,21 @@
             },
             "Function": 0
           },
-          "Name": "Sum(Sheet4.Amount)",
+          "Name": "Sum(Trend.Amount)",
           "NativeReferenceName": "Sum of Amount"
-        },
-        {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Source": "s"
-              }
-            },
-            "Property": "Current Status"
-          },
-          "Name": "Sheet4.Current Status",
-          "NativeReferenceName": "Current Status"
         }
       ],
       "OrderBy": [
         {
-          "Direction": 2,
+          "Direction": 1,
           "Expression": {
-            "Aggregation": {
+            "Column": {
               "Expression": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Source": "s"
-                    }
-                  },
-                  "Property": "Amount"
+                "SourceRef": {
+                  "Source": "t"
                 }
               },
-              "Function": 0
+              "Property": "Est. End Date"
             }
           }
         }

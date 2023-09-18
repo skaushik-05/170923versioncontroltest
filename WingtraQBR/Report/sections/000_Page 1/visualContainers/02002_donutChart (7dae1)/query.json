@@ -13,6 +13,18 @@
           ],
           "Select": [
             {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "t"
+                  }
+                },
+                "Property": "Week"
+              },
+              "Name": "Trend.Week",
+              "NativeReferenceName": "Week"
+            },
+            {
               "Aggregation": {
                 "Expression": {
                   "Column": {
@@ -21,37 +33,13 @@
                         "Source": "t"
                       }
                     },
-                    "Property": "Age_Red"
+                    "Property": "Amount"
                   }
                 },
                 "Function": 0
               },
-              "Name": "Sum(Trend.Age)",
-              "NativeReferenceName": "Sum of Age"
-            },
-            {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Source": "t"
-                  }
-                },
-                "Property": "SSM POC"
-              },
-              "Name": "Trend.SSM POC",
-              "NativeReferenceName": "SSM POC"
-            },
-            {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Source": "t"
-                  }
-                },
-                "Property": "TO Requestor"
-              },
-              "Name": "Trend.TO Requestor",
-              "NativeReferenceName": "TO Requestor"
+              "Name": "Sum(Trend.Amount)",
+              "NativeReferenceName": "Sum of Amount"
             },
             {
               "Column": {
@@ -64,24 +52,31 @@
               },
               "Name": "Trend.Work At Risk ",
               "NativeReferenceName": "Work At Risk "
+            },
+            {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "t"
+                  }
+                },
+                "Property": "Vendor"
+              },
+              "Name": "Trend.Vendor",
+              "NativeReferenceName": "Vendor"
             }
           ],
           "OrderBy": [
             {
-              "Direction": 2,
+              "Direction": 1,
               "Expression": {
-                "Aggregation": {
+                "Column": {
                   "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Source": "t"
-                        }
-                      },
-                      "Property": "Age_Red"
+                    "SourceRef": {
+                      "Source": "t"
                     }
                   },
-                  "Function": 0
+                  "Property": "Week"
                 }
               }
             }
@@ -92,9 +87,9 @@
             "Groupings": [
               {
                 "Projections": [
-                  2
-                ],
-                "Subtotal": 1
+                  0,
+                  1
+                ]
               }
             ]
           },
@@ -102,13 +97,7 @@
             "Groupings": [
               {
                 "Projections": [
-                  1
-                ]
-              },
-              {
-                "Projections": [
-                  0,
-                  3
+                  2
                 ]
               }
             ]
@@ -116,14 +105,10 @@
           "DataReduction": {
             "DataVolume": 3,
             "Primary": {
-              "Window": {
-                "Count": 100
-              }
+              "Top": {}
             },
             "Secondary": {
-              "Top": {
-                "Count": 100
-              }
+              "Top": {}
             }
           },
           "Version": 1
