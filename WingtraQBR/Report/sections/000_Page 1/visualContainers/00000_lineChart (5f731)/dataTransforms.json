@@ -23,6 +23,11 @@
     ],
     "Series": [
       2
+
+    ],
+    "Rows": [
+      3
+
     ]
   },
   "projectionActiveItems": {
@@ -50,6 +55,12 @@
         "Restatement": "Work At Risk ",
         "Name": "Trend.Work At Risk ",
         "Type": 2048
+
+      },
+      {
+        "Restatement": "Project Name",
+        "Name": "Weekly Status.Project Name",
+        "Type": 2048
       }
     ]
   },
@@ -69,6 +80,11 @@
         {
           "Name": "Series",
           "Projection": 2,
+          "isActive": false
+        },
+        {
+          "Name": "Rows",
+          "Projection": 3,
           "isActive": false
         }
       ]
@@ -141,6 +157,27 @@
             }
           },
           "Property": "Work At Risk "
+        }
+      }
+    },
+    {
+      "displayName": "Project Name",
+      "queryName": "Weekly Status.Project Name",
+      "roles": {
+        "Rows": true
+      },
+      "type": {
+        "category": null,
+        "underlyingType": 1
+      },
+      "expr": {
+        "Column": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Weekly Status"
+            }
+          },
+          "Property": "Project Name"
         }
       }
     }
