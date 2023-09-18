@@ -1,30 +1,33 @@
 {
-  "name": "5f731603e756bb6eb8e3",
+  "name": "7dae1cd3b5b61b64905a",
   "layouts": [
     {
       "id": 0,
       "position": {
         "x": 0,
-        "y": 0,
-        "z": 0,
+        "y": 381.39219015280139,
+        "z": 1000,
         "width": 435.17826825127338,
         "height": 338.60780984719867,
-        "tabOrder": 0
+        "tabOrder": 1000
       }
     }
   ],
   "singleVisual": {
-    "visualType": "lineChart",
+    "visualType": "donutChart",
     "projections": {
-      "Y": [
-        {
-          "queryRef": "Sum(Trend.Amount)"
-        }
-      ],
       "Category": [
         {
           "queryRef": "Trend.Week",
           "active": true
+        },
+        {
+          "queryRef": "Trend.Vendor"
+        }
+      ],
+      "Y": [
+        {
+          "queryRef": "Sum(Trend.Amount)"
         }
       ],
       "Series": [
@@ -43,6 +46,18 @@
         }
       ],
       "Select": [
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "t"
+              }
+            },
+            "Property": "Week"
+          },
+          "Name": "Trend.Week",
+          "NativeReferenceName": "Week"
+        },
         {
           "Aggregation": {
             "Expression": {
@@ -67,10 +82,10 @@
                 "Source": "t"
               }
             },
-            "Property": "Week"
+            "Property": "Work At Risk "
           },
-          "Name": "Trend.Week",
-          "NativeReferenceName": "Week"
+          "Name": "Trend.Work At Risk ",
+          "NativeReferenceName": "Work At Risk "
         },
         {
           "Column": {
@@ -79,10 +94,10 @@
                 "Source": "t"
               }
             },
-            "Property": "Work At Risk "
+            "Property": "Vendor"
           },
-          "Name": "Trend.Work At Risk ",
-          "NativeReferenceName": "Work At Risk "
+          "Name": "Trend.Vendor",
+          "NativeReferenceName": "Vendor"
         }
       ],
       "OrderBy": [
