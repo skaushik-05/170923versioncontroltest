@@ -19,39 +19,6 @@
         "Name": "Sheet4.Current Status",
         "Type": 2048
       }
-    ],
-    "Filters": [
-      {
-        "type": 2,
-        "expression": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Sheet4"
-                  }
-                },
-                "Property": "Amount"
-              }
-            },
-            "Function": 0
-          }
-        }
-      },
-      {
-        "type": 0,
-        "expression": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Sheet4"
-              }
-            },
-            "Property": "Current Status"
-          }
-        }
-      }
     ]
   },
   "visualElements": [
